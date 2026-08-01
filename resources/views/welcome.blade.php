@@ -326,6 +326,12 @@
                 dotsContainer.style.opacity = '1';
                 dotsContainer.style.pointerEvents = 'auto';
             }
+
+            // Set Home link as active
+            const homeLink = document.querySelector('.nav-link');
+            if (homeLink && window.setActiveLink) {
+                window.setActiveLink(homeLink);
+            }
         }, 300);
     }
     </script>

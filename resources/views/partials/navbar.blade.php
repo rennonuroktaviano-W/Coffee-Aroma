@@ -153,10 +153,24 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 });
 
 // ========== ACTIVE LINK ==========
+window.setActiveLink = function(target) {
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    if (target) {
+        target.classList.add('active');
+    }
+}
+
+// Set Home as active on initial load
+document.addEventListener('DOMContentLoaded', () => {
+    const homeLink = document.querySelector('.nav-link');
+    if (homeLink) {
+        window.setActiveLink(homeLink);
+    }
+});
+
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function() {
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+        window.setActiveLink(this);
     });
 });
 </script>
