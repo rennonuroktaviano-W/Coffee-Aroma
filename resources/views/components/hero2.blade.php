@@ -136,30 +136,38 @@
                     <ellipse cx="150" cy="150" rx="95" ry="95" fill="none" stroke="#2E5A32" stroke-width="2"
                         opacity="0.4" />
 
-                    {{-- Simple Foam Swirl (not leaf) --}}
-                    <g transform="translate(150,150)" opacity="0.85">
-                        <circle cx="0" cy="0" r="35" fill="none" stroke="url(#matchaFoam)" stroke-width="2.5"
-                            opacity="0.6" />
-                        <circle cx="0" cy="0" r="25" fill="none" stroke="url(#matchaFoam)" stroke-width="2"
-                            opacity="0.5" />
-                        <circle cx="0" cy="0" r="15" fill="none" stroke="url(#matchaFoam)" stroke-width="1.5"
-                            opacity="0.4" />
-                        <circle cx="0" cy="0" r="6" fill="#F5FBF0" opacity="0.7" />
-                    </g>
 
-                    {{-- Matcha Powder Dots (Dark Green) --}}
-                    <circle cx="125" cy="125" r="2.5" fill="#0f2e12" opacity="0.75" />
-                    <circle cx="170" cy="135" r="2" fill="#0f2e12" opacity="0.6" />
-                    <circle cx="140" cy="175" r="3" fill="#0f2e12" opacity="0.7" />
-                    <circle cx="180" cy="165" r="1.8" fill="#0f2e12" opacity="0.8" />
-                    <circle cx="110" cy="155" r="2.2" fill="#0f2e12" opacity="0.65" />
-                    <circle cx="160" cy="115" r="2.5" fill="#0f2e12" opacity="0.7" />
-                    <circle cx="135" cy="145" r="1.5" fill="#0f2e12" opacity="0.8" />
-                    <circle cx="185" cy="145" r="2" fill="#0f2e12" opacity="0.6" />
-                    <circle cx="115" cy="175" r="1.8" fill="#0f2e12" opacity="0.7" />
-                    <circle cx="155" cy="185" r="2.3" fill="#0f2e12" opacity="0.65" />
-                    <circle cx="145" cy="130" r="1.6" fill="#0f2e12" opacity="0.8" />
-                    <circle cx="125" cy="165" r="2" fill="#0f2e12" opacity="0.7" />
+
+                    {{-- Matcha Powder Dots (Dark Green Dense) --}}
+                    <circle cx="125" cy="125" r="2.5" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="170" cy="135" r="2" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="140" cy="175" r="3" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="180" cy="165" r="1.8" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="110" cy="155" r="2.2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="160" cy="115" r="2.5" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="135" cy="145" r="1.5" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="185" cy="145" r="2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="115" cy="175" r="1.8" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="155" cy="185" r="2.3" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="145" cy="130" r="1.6" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="125" cy="165" r="2" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="150" cy="150" r="2.8" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="165" cy="140" r="2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="130" cy="135" r="1.8" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="175" cy="150" r="2.2" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="120" cy="140" r="2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="145" cy="160" r="2.5" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="165" cy="170" r="1.6" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="135" cy="155" r="2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="155" cy="130" r="1.8" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="140" cy="145" r="2.2" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="170" cy="160" r="1.5" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="118" cy="165" r="2" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="150" cy="120" r="1.8" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="180" cy="140" r="2" fill="#0a1f0c" opacity="0.9" />
+                    <circle cx="128" cy="180" r="1.6" fill="#0a1f0c" opacity="0.95" />
+                    <circle cx="168" cy="180" r="2" fill="#0a1f0c" opacity="0.85" />
+                    <circle cx="148" cy="138" r="1.8" fill="#0a1f0c" opacity="0.9" />
 
                     {{-- Rim Reflection --}}
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="none" stroke="#FFF" stroke-width="1"

@@ -25,6 +25,98 @@
         </div>
     </div>
 
+    {{-- Floating Oreo Cookies Background --}}
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        {{-- Oreo Cookie 1 --}}
+        <div class="absolute top-[8%] left-[5%] w-14 h-14 opacity-[0.08] animate-[float_10s_ease-in-out_infinite]"
+            style="animation-delay: 0s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 2 --}}
+        <div class="absolute top-[15%] right-[8%] w-10 h-10 opacity-[0.06] animate-[float_12s_ease-in-out_infinite]"
+            style="animation-delay: 2s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 3 --}}
+        <div class="absolute top-[65%] left-[3%] w-16 h-16 opacity-[0.07] animate-[float_14s_ease-in-out_infinite]"
+            style="animation-delay: 4s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 4 --}}
+        <div class="absolute top-[75%] right-[5%] w-12 h-12 opacity-[0.09] animate-[float_11s_ease-in-out_infinite]"
+            style="animation-delay: 1s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 5 --}}
+        <div class="absolute top-[40%] left-[8%] w-8 h-8 opacity-[0.05] animate-[float_9s_ease-in-out_infinite]"
+            style="animation-delay: 3s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 6 --}}
+        <div class="absolute top-[30%] right-[3%] w-14 h-14 opacity-[0.06] animate-[float_13s_ease-in-out_infinite]"
+            style="animation-delay: 5s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 7 --}}
+        <div class="absolute top-[85%] left-[15%] w-10 h-10 opacity-[0.07] animate-[float_10s_ease-in-out_infinite]"
+            style="animation-delay: 1.5s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+        {{-- Oreo Cookie 8 --}}
+        <div class="absolute top-[50%] right-[12%] w-11 h-11 opacity-[0.08] animate-[float_11s_ease-in-out_infinite]"
+            style="animation-delay: 2.5s;">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
+                <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="28" fill="#1a1a2e" />
+                <circle cx="50" cy="50" r="18" fill="#0f0f1a" />
+                <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
+            </svg>
+        </div>
+    </div>
+
     {{-- Main Content Grid --}}
     <div
         class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -95,10 +187,11 @@
                             <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.6" />
                         </filter>
                         <radialGradient id="oreoLiquid" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#3E2723" />
-                            <stop offset="40%" stop-color="#2A1B15" />
-                            <stop offset="80%" stop-color="#1A100A" />
-                            <stop offset="100%" stop-color="#0F0905" />
+                            <stop offset="0%" stop-color="#E8E0D8" />
+                            <stop offset="30%" stop-color="#C8BEB4" />
+                            <stop offset="60%" stop-color="#8A7E74" />
+                            <stop offset="85%" stop-color="#4A423A" />
+                            <stop offset="100%" stop-color="#2A2520" />
                         </radialGradient>
                         <linearGradient id="oreoCream" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stop-color="#FFFFFF" />
@@ -135,47 +228,80 @@
                     <ellipse cx="150" cy="150" rx="95" ry="95" fill="none" stroke="#2A1B15" stroke-width="2"
                         opacity="0.4" />
 
-                    {{-- Cream Swirl (like Oreo filling) --}}
-                    <g transform="translate(150,150)" opacity="0.9">
-                        <path d="M0,0 m-30,0 a30,30 0 1,1 60,0 a30,30 0 1,1 -60,0" fill="none" stroke="url(#oreoCream)"
-                            stroke-width="3" opacity="0.7" />
-                        <path d="M0,0 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0" fill="none" stroke="url(#oreoCream)"
-                            stroke-width="2.5" opacity="0.6" />
-                        <path d="M0,0 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" fill="none" stroke="url(#oreoCream)"
-                            stroke-width="2" opacity="0.5" />
-                        <circle cx="0" cy="0" r="5" fill="#FFFFFF" opacity="0.8" />
-                    </g>
+
 
                     {{-- Cookie Crumbs (Oreo biscuit pieces) --}}
-                    <rect x="125" y="120" width="4" height="3" fill="#1a0f08" opacity="0.85"
+                    <rect x="125" y="120" width="4" height="3" fill="#1a0f08" opacity="0.9"
                         transform="rotate(15 125 120)" />
-                    <rect x="170" y="130" width="3" height="4" fill="#1a0f08" opacity="0.75"
+                    <rect x="170" y="130" width="3" height="4" fill="#1a0f08" opacity="0.85"
                         transform="rotate(-20 170 130)" />
-                    <rect x="140" y="175" width="5" height="3" fill="#1a0f08" opacity="0.8"
+                    <rect x="140" y="175" width="5" height="3" fill="#1a0f08" opacity="0.9"
                         transform="rotate(45 140 175)" />
-                    <rect x="180" y="160" width="3" height="3" fill="#1a0f08" opacity="0.9"
+                    <rect x="180" y="160" width="3" height="3" fill="#1a0f08" opacity="0.95"
                         transform="rotate(30 180 160)" />
-                    <rect x="115" y="150" width="4" height="2" fill="#1a0f08" opacity="0.7"
+                    <rect x="115" y="150" width="4" height="2" fill="#1a0f08" opacity="0.8"
                         transform="rotate(-10 115 150)" />
-                    <rect x="160" y="110" width="3" height="5" fill="#1a0f08" opacity="0.8"
+                    <rect x="160" y="110" width="3" height="5" fill="#1a0f08" opacity="0.9"
                         transform="rotate(60 160 110)" />
-                    <rect x="135" y="140" width="2" height="2" fill="#1a0f08" opacity="0.9" />
-                    <rect x="185" y="145" width="3" height="3" fill="#1a0f08" opacity="0.75"
+                    <rect x="135" y="140" width="2" height="2" fill="#1a0f08" opacity="0.95" />
+                    <rect x="185" y="145" width="3" height="3" fill="#1a0f08" opacity="0.85"
                         transform="rotate(40 185 145)" />
-                    <rect x="120" y="170" width="4" height="3" fill="#1a0f08" opacity="0.8"
+                    <rect x="120" y="170" width="4" height="3" fill="#1a0f08" opacity="0.9"
                         transform="rotate(-35 120 170)" />
-                    <rect x="155" y="185" width="3" height="4" fill="#1a0f08" opacity="0.85"
+                    <rect x="155" y="185" width="3" height="4" fill="#1a0f08" opacity="0.95"
                         transform="rotate(25 155 185)" />
-                    <rect x="145" y="125" width="2" height="3" fill="#1a0f08" opacity="0.8"
+                    <rect x="145" y="125" width="2" height="3" fill="#1a0f08" opacity="0.9"
                         transform="rotate(55 145 125)" />
-                    <rect x="128" y="158" width="3" height="2" fill="#1a0f08" opacity="0.7"
+                    <rect x="128" y="158" width="3" height="2" fill="#1a0f08" opacity="0.8"
                         transform="rotate(-25 128 158)" />
+                    <rect x="150" y="140" width="4" height="3" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(20 150 140)" />
+                    <rect x="165" y="155" width="3" height="4" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(-15 165 155)" />
+                    <rect x="130" y="165" width="5" height="2" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(35 130 165)" />
+                    <rect x="175" y="135" width="3" height="3" fill="#1a0f08" opacity="0.95"
+                        transform="rotate(50 175 135)" />
+                    <rect x="110" y="135" width="4" height="3" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(-30 110 135)" />
+                    <rect x="148" y="110" width="3" height="4" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(40 148 110)" />
+                    <rect x="138" y="180" width="4" height="3" fill="#1a0f08" opacity="0.95"
+                        transform="rotate(-20 138 180)" />
+                    <rect x="168" y="170" width="3" height="3" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(25 168 170)" />
+                    <rect x="122" y="145" width="3" height="2" fill="#1a0f08" opacity="0.9" />
+                    <rect x="158" y="148" width="2" height="4" fill="#1a0f08" opacity="0.95"
+                        transform="rotate(15 158 148)" />
+                    <rect x="142" y="155" width="4" height="2" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(-10 142 155)" />
+                    <rect x="152" y="168" width="3" height="3" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(45 152 168)" />
+                    <rect x="118" y="160" width="3" height="2" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(-40 118 160)" />
+                    <rect x="162" y="125" width="2" height="3" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(30 162 125)" />
+                    <rect x="132" y="130" width="3" height="3" fill="#1a0f08" opacity="0.95"
+                        transform="rotate(-25 132 130)" />
+                    <rect x="178" y="150" width="4" height="2" fill="#1a0f08" opacity="0.85"
+                        transform="rotate(15 178 150)" />
+                    <rect x="140" y="115" width="3" height="4" fill="#1a0f08" opacity="0.9"
+                        transform="rotate(55 140 115)" />
 
                     {{-- White cream specks --}}
-                    <circle cx="132" cy="138" r="1.2" fill="#FFF" opacity="0.5" />
-                    <circle cx="168" cy="152" r="1" fill="#FFF" opacity="0.4" />
-                    <circle cx="148" cy="168" r="1.3" fill="#FFF" opacity="0.6" />
-                    <circle cx="158" cy="128" r="1" fill="#FFF" opacity="0.45" />
+                    <circle cx="132" cy="138" r="1.2" fill="#FFF" opacity="0.6" />
+                    <circle cx="168" cy="152" r="1" fill="#FFF" opacity="0.5" />
+                    <circle cx="148" cy="168" r="1.3" fill="#FFF" opacity="0.7" />
+                    <circle cx="158" cy="128" r="1" fill="#FFF" opacity="0.55" />
+                    <circle cx="140" cy="148" r="1.5" fill="#FFF" opacity="0.6" />
+                    <circle cx="155" cy="162" r="1.2" fill="#FFF" opacity="0.5" />
+                    <circle cx="125" cy="155" r="1" fill="#FFF" opacity="0.65" />
+                    <circle cx="172" cy="142" r="1.3" fill="#FFF" opacity="0.55" />
+                    <circle cx="138" cy="172" r="1" fill="#FFF" opacity="0.6" />
+                    <circle cx="165" cy="178" r="1.2" fill="#FFF" opacity="0.5" />
+                    <circle cx="150" cy="135" r="1.5" fill="#FFF" opacity="0.7" />
+                    <circle cx="118" cy="142" r="1" fill="#FFF" opacity="0.55" />
+                    <circle cx="180" cy="165" r="1.3" fill="#FFF" opacity="0.6" />
 
                     {{-- Rim Reflection --}}
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="none" stroke="#FFF" stroke-width="1"

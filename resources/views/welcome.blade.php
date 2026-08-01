@@ -96,7 +96,7 @@
                 aria-label="Slide 1">
                 <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
                 <span
-                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Kopi</span>
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Caramel</span>
             </button>
 
             <!-- Separator -->
@@ -119,7 +119,7 @@
                 aria-label="Slide 3">
                 <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
                 <span
-                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Teh</span>
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Americano</span>
             </button>
 
             <!-- Separator -->
@@ -131,7 +131,8 @@
                 aria-label="Slide 4">
                 <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
                 <span
-                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Coklat</span>
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Cookies
+                    & Cream</span>
             </button>
         </div>
 
