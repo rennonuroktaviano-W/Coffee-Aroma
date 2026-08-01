@@ -74,7 +74,6 @@
         user-select: none !important;
     }
 
-    /* Nav bottom entrance animation */
     @keyframes nav-up {
         0% {
             opacity: 0;
@@ -116,6 +115,9 @@
     {{-- EXPERIENCE PAGE --}}
     @include('partials.experience')
 
+    {{-- MENU PAGE --}}
+    @include('partials.menu')
+
     {{-- 3D RUBIK PAGE TRANSITION SYSTEM --}}
     <script>
     let currentView = 'home';
@@ -128,7 +130,8 @@
         const pages = {
             'home': document.getElementById('hero-slider'),
             'our-story': document.getElementById('our-story-page'),
-            'experience': document.getElementById('experience-page')
+            'experience': document.getElementById('experience-page'),
+            'menu': document.getElementById('menu-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -176,7 +179,6 @@
             next.style.pointerEvents = 'auto';
             next.classList.add('active');
 
-            // Trigger internal page animations
             setTimeout(() => {
                 next.dispatchEvent(new CustomEvent('pageactivated'));
             }, 400);
@@ -195,7 +197,8 @@
         const pages = {
             'home': document.getElementById('hero-slider'),
             'our-story': document.getElementById('our-story-page'),
-            'experience': document.getElementById('experience-page')
+            'experience': document.getElementById('experience-page'),
+            'menu': document.getElementById('menu-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -249,13 +252,16 @@
         }, 900);
     }
 
-    // Legacy wrappers
     function openOurStory() {
         transitionTo('our-story');
     }
 
     function openExperience() {
         transitionTo('experience');
+    }
+
+    function openMenu() {
+        transitionTo('menu');
     }
     </script>
 
