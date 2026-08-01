@@ -32,9 +32,9 @@
                     class="nav-link relative px-3.5 py-1.5 text-[11px] font-semibold text-white/60 uppercase tracking-wider transition-all duration-300 rounded-full hover:text-white hover:bg-white/[0.08]">
                     <span>Our Story</span>
                 </a>
-                <a href="#"
+                <a href="#" onclick="openExperience(); return false;"
                     class="nav-link relative px-3.5 py-1.5 text-[11px] font-semibold text-white/60 uppercase tracking-wider transition-all duration-300 rounded-full hover:text-white hover:bg-white/[0.08]">
-                    <span>Experince</span>
+                    <span>Experience</span>
                 </a>
                 <a href="#"
                     class="nav-link relative px-3.5 py-1.5 text-[11px] font-semibold text-white/60 uppercase tracking-wider transition-all duration-300 rounded-full hover:text-white hover:bg-white/[0.08]">
@@ -75,6 +75,11 @@
                 class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
                 <span class="material-symbols-outlined text-white/40 text-base">info</span>
                 <span class="font-semibold text-xs uppercase tracking-wider">Our Story</span>
+            </a>
+            <a href="#" onclick="openExperience(); return false;"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                <span class="material-symbols-outlined text-white/40 text-base">star</span>
+                <span class="font-semibold text-xs uppercase tracking-wider">Experience</span>
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">

@@ -91,66 +91,6 @@
         animation: nav-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    @keyframes quake-shake {
-
-        0%,
-        100% {
-            transform: translate(0, 0);
-        }
-
-        8% {
-            transform: translate(-3px, 2px);
-        }
-
-        16% {
-            transform: translate(3px, -2px);
-        }
-
-        24% {
-            transform: translate(-4px, 3px);
-        }
-
-        32% {
-            transform: translate(4px, -3px);
-        }
-
-        40% {
-            transform: translate(-3px, 2px);
-        }
-
-        48% {
-            transform: translate(3px, -2px);
-        }
-
-        56% {
-            transform: translate(-2px, 1px);
-        }
-
-        64% {
-            transform: translate(2px, -1px);
-        }
-
-        72% {
-            transform: translate(-1px, 2px);
-        }
-
-        80% {
-            transform: translate(1px, -2px);
-        }
-
-        88% {
-            transform: translate(-2px, 1px);
-        }
-
-        96% {
-            transform: translate(2px, -1px);
-        }
-    }
-
-    .quake-shake {
-        animation: quake-shake 0.7s ease-in-out;
-    }
-
     #hero-slider {
         transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
         will-change: transform;
@@ -170,169 +110,152 @@
         @include('partials.navbar')
     </div>
 
-
-    {{-- CRACK OVERLAY (Earthquake Effect) --}}
-    <div id="crack-overlay" class="fixed inset-0 z-[200] pointer-events-none opacity-0"
-        style="transition: opacity 0.1s ease;">
-        <svg id="crack-svg" class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-                <filter id="crack-glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="0.2" result="blur" />
-                    <feMerge>
-                        <feMergeNode in="blur" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-            </defs>
-            <path id="crack-main" d="M50,50 L50,50" stroke="#ff6b35" stroke-width="0.12" fill="none"
-                filter="url(#crack-glow)" opacity="0" />
-            <path id="crack-b1" d="M50,50 L50,50" stroke="#ff8c42" stroke-width="0.08" fill="none" opacity="0" />
-            <path id="crack-b2" d="M50,50 L50,50" stroke="#ff6b35" stroke-width="0.1" fill="none" opacity="0" />
-            <path id="crack-b3" d="M50,50 L50,50" stroke="#ff8c42" stroke-width="0.07" fill="none" opacity="0" />
-            <path id="crack-b4" d="M50,50 L50,50" stroke="#ff6b35" stroke-width="0.09" fill="none" opacity="0" />
-            <path id="crack-b5" d="M50,50 L50,50" stroke="#ff8c42" stroke-width="0.06" fill="none" opacity="0" />
-        </svg>
-        <div id="crack-darken" class="absolute inset-0 bg-black/0 transition-all duration-700"></div>
-    </div>
-
     {{-- OUR STORY PAGE --}}
     @include('partials.our-story')
 
-    {{-- PAGE TRANSITION SCRIPTS --}}
+    {{-- EXPERIENCE PAGE --}}
+    @include('partials.experience')
+
+    {{-- 3D RUBIK PAGE TRANSITION SYSTEM --}}
     <script>
+    let currentView = 'home';
     let isTransitioning = false;
 
-    function openOurStory() {
-        if (isTransitioning) return;
+    function transitionTo(pageId) {
+        if (isTransitioning || currentView === pageId) return;
         isTransitioning = true;
 
-        const body = document.body;
-        const overlay = document.getElementById('crack-overlay');
-        const darken = document.getElementById('crack-darken');
-        const heroSlider = document.getElementById('hero-slider');
+        const pages = {
+            'home': document.getElementById('hero-slider'),
+            'our-story': document.getElementById('our-story-page'),
+            'experience': document.getElementById('experience-page')
+        };
+
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
-        const ourStory = document.getElementById('our-story-page');
+        const current = pages[currentView];
+        const next = pages[pageId];
 
-        // 1. SHAKE EFFECT
-        body.classList.add('quake-shake');
-
-        // 2. Show overlay + darken after shake starts
-        setTimeout(() => {
-            overlay.style.opacity = '1';
-            darken.style.backgroundColor = 'rgba(0,0,0,0.75)';
-
-            // Animate cracks spreading from center
-            const cracks = [{
-                    id: 'crack-main',
-                    d: 'M50,50 L50,0 M50,50 L50,100 M50,50 L0,50 M50,50 L100,50',
-                    delay: 0
-                },
-                {
-                    id: 'crack-b1',
-                    d: 'M50,50 L25,25 L10,8 M50,50 L75,25 L92,12',
-                    delay: 80
-                },
-                {
-                    id: 'crack-b2',
-                    d: 'M50,50 L22,78 L8,92 M50,50 L78,78 L92,88',
-                    delay: 160
-                },
-                {
-                    id: 'crack-b3',
-                    d: 'M50,50 L32,32 L18,15 M50,50 L68,32 L85,18',
-                    delay: 120
-                },
-                {
-                    id: 'crack-b4',
-                    d: 'M50,50 L28,72 L12,85 M50,50 L72,72 L88,82',
-                    delay: 200
-                },
-                {
-                    id: 'crack-b5',
-                    d: 'M50,50 L38,28 L28,10 M50,50 L62,28 L75,10',
-                    delay: 240
-                }
-            ];
-
-            cracks.forEach(c => {
-                const path = document.getElementById(c.id);
-                path.setAttribute('d', c.d);
-                const len = 180;
-                path.style.strokeDasharray = len;
-                path.style.strokeDashoffset = len;
-                path.style.opacity = '0';
-                path.style.transition =
-                    `stroke-dashoffset 0.7s ease-out ${c.delay}ms, opacity 0.15s ease ${c.delay}ms`;
-                requestAnimationFrame(() => {
-                    path.style.opacity = '1';
-                    path.style.strokeDashoffset = '0';
-                });
-            });
-        }, 250);
-
-        // 3. SPLIT OPEN — cracks retract, reveal Our Story
-        setTimeout(() => {
-            // Hide hero, show our story
-            heroSlider.style.opacity = '0';
-            heroSlider.style.pointerEvents = 'none';
-            if (dotsContainer) {
-                dotsContainer.style.opacity = '0';
-                dotsContainer.style.pointerEvents = 'none';
-            }
-
-            // Crack overlay splits and fades
-            overlay.style.transition = 'clip-path 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease 0.3s';
-            overlay.style.clipPath = 'inset(0 50% 0 50%)';
-            overlay.style.opacity = '0';
-
-            // Show Our Story
-            ourStory.style.opacity = '1';
-            ourStory.style.pointerEvents = 'auto';
-            ourStory.style.transform = 'translateY(0)';
-        }, 1400);
-
-        // 4. Cleanup
-        setTimeout(() => {
-            body.classList.remove('quake-shake');
-            // Reset cracks
-            document.querySelectorAll('#crack-svg path').forEach(p => {
-                p.style.transition = 'none';
-                p.style.opacity = '0';
-                p.setAttribute('d', 'M50,50 L50,50');
-            });
-            overlay.style.transition = 'none';
-            overlay.style.clipPath = 'inset(0 0% 0 0%)';
-            overlay.style.opacity = '0';
-            darken.style.backgroundColor = 'rgba(0,0,0,0)';
+        if (!current || !next) {
             isTransitioning = false;
-        }, 2200);
+            return;
+        }
+
+        // Prepare next page: start from right face (rotateY 90deg)
+        next.style.transition = 'none';
+        next.style.transform = 'perspective(1200px) rotateY(90deg) scale(0.92)';
+        next.style.opacity = '0';
+        next.style.pointerEvents = 'none';
+        next.classList.remove('active');
+
+        // Force reflow
+        void next.offsetWidth;
+
+        // Current page exits to left face (rotateY -90deg)
+        current.style.transition = 'transform 0.85s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.55s ease';
+        current.style.transform = 'perspective(1200px) rotateY(-90deg) scale(0.92)';
+        current.style.opacity = '0';
+        current.style.pointerEvents = 'none';
+
+        if (current.classList.contains('active')) {
+            current.classList.remove('active');
+        }
+
+        // Hide dots when leaving home
+        if (dotsContainer && pageId !== 'home') {
+            dotsContainer.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            dotsContainer.style.opacity = '0';
+            dotsContainer.style.transform = 'translateY(10px)';
+            dotsContainer.style.pointerEvents = 'none';
+        }
+
+        // Animate next page in from right to center
+        requestAnimationFrame(() => {
+            next.style.transition = 'transform 0.85s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.65s ease';
+            next.style.transform = 'perspective(1200px) rotateY(0deg) scale(1)';
+            next.style.opacity = '1';
+            next.style.pointerEvents = 'auto';
+            next.classList.add('active');
+
+            // Trigger internal page animations
+            setTimeout(() => {
+                next.dispatchEvent(new CustomEvent('pageactivated'));
+            }, 400);
+        });
+
+        setTimeout(() => {
+            isTransitioning = false;
+            currentView = pageId;
+        }, 900);
     }
 
     function goHome() {
-        const heroSlider = document.getElementById('hero-slider');
+        if (isTransitioning || currentView === 'home') return;
+        isTransitioning = true;
+
+        const pages = {
+            'home': document.getElementById('hero-slider'),
+            'our-story': document.getElementById('our-story-page'),
+            'experience': document.getElementById('experience-page')
+        };
+
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
-        const ourStory = document.getElementById('our-story-page');
+        const current = pages[currentView];
+        const home = pages['home'];
 
-        // Fade out our story
-        ourStory.style.opacity = '0';
-        ourStory.style.pointerEvents = 'none';
-        ourStory.style.transform = 'translateY(24px)';
+        if (!current || !home) {
+            isTransitioning = false;
+            return;
+        }
 
-        // Fade in hero
+        // Current page exits to right
+        current.style.transition = 'transform 0.85s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.55s ease';
+        current.style.transform = 'perspective(1200px) rotateY(90deg) scale(0.92)';
+        current.style.opacity = '0';
+        current.style.pointerEvents = 'none';
+        current.classList.remove('active');
+
+        // Prepare home from left
+        home.style.transition = 'none';
+        home.style.transform = 'perspective(1200px) rotateY(-90deg) scale(0.92)';
+        home.style.opacity = '0';
+        home.style.pointerEvents = 'auto';
+        void home.offsetWidth;
+
+        // Show dots
+        if (dotsContainer) {
+            dotsContainer.style.transition = 'none';
+            dotsContainer.style.opacity = '0';
+            dotsContainer.style.transform = 'translateY(10px)';
+            void dotsContainer.offsetWidth;
+            dotsContainer.style.transition = 'opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s';
+            dotsContainer.style.opacity = '1';
+            dotsContainer.style.transform = 'translateY(0)';
+            dotsContainer.style.pointerEvents = 'auto';
+        }
+
+        requestAnimationFrame(() => {
+            home.style.transition = 'transform 0.85s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.65s ease';
+            home.style.transform = 'perspective(1200px) rotateY(0deg) scale(1)';
+            home.style.opacity = '1';
+        });
+
         setTimeout(() => {
-            heroSlider.style.opacity = '1';
-            heroSlider.style.pointerEvents = 'auto';
-            if (dotsContainer) {
-                dotsContainer.style.opacity = '1';
-                dotsContainer.style.pointerEvents = 'auto';
-            }
-
-            // Set Home link as active
             const homeLink = document.querySelector('.nav-link');
             if (homeLink && window.setActiveLink) {
                 window.setActiveLink(homeLink);
             }
-        }, 300);
+            isTransitioning = false;
+            currentView = 'home';
+        }, 900);
+    }
+
+    // Legacy wrappers
+    function openOurStory() {
+        transitionTo('our-story');
+    }
+
+    function openExperience() {
+        transitionTo('experience');
     }
     </script>
 

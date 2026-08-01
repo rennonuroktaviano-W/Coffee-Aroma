@@ -3,8 +3,8 @@
 {{-- Premium brand narrative with scroll reveals --}}
 {{-- ========================================== --}}
 
-<div id="our-story-page"
-    class="absolute inset-0 z-30 opacity-0 pointer-events-none transition-all duration-700 translate-y-6">
+<div id="our-story-page" class="absolute inset-0 z-30 opacity-0 pointer-events-none"
+    style="transform: perspective(1200px) rotateY(90deg) scale(0.92); transform-origin: center left; backface-visibility: hidden;">
 
     {{-- Dark chocolate background with ambient glow --}}
     <div class="absolute inset-0 bg-[#1F150C] overflow-hidden">
@@ -197,8 +197,6 @@
                     </div>
                 </div>
 
-
-
                 {{-- Decorative bottom line --}}
                 <div class="h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent mt-auto"></div>
             </div>
@@ -208,11 +206,10 @@
         {{-- ANIMATIONS & INTERACTIONS                  --}}
         {{-- ========================================== --}}
         <style>
-        /* ---- Active State: Make page visible ---- */
+        /* ---- Active State: Managed by JS 3D Transition ---- */
         #our-story-page.active {
             opacity: 1 !important;
             pointer-events: auto !important;
-            transform: translateY(0) !important;
         }
 
         /* ---- Scroll Reveal Base ---- */
@@ -296,6 +293,18 @@
 
             revealItems.forEach(item => revealObserver.observe(item));
 
+            // Force reveal visible items when page activated
+            page.addEventListener('pageactivated', () => {
+                setTimeout(() => {
+                    revealItems.forEach(item => {
+                        const rect = item.getBoundingClientRect();
+                        if (rect.top < window.innerHeight && rect.bottom > 0) {
+                            item.classList.add('revealed');
+                        }
+                    });
+                }, 300);
+            });
+
             // ---- Animated Stat Counters ----
             const statNumbers = page.querySelectorAll('.stat-number');
             let countersAnimated = false;
@@ -340,7 +349,7 @@
             }
 
             // ---- Parallax Ambient Glow ----
-            const glows = page.querySelectorAll('.blur-\[120px\], .blur-\[100px\]');
+            const glows = page.querySelectorAll('.blur-\\[120px\\], .blur-\\[100px\\]');
             if (scrollContainer) {
                 scrollContainer.addEventListener('scroll', () => {
                     const scrollY = scrollContainer.scrollTop;
@@ -354,3 +363,5 @@
             }
         })();
         </script>
+    </div>
+</div>
