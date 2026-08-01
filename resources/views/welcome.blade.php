@@ -152,7 +152,8 @@
     }
 
     #hero-slider {
-        transition: opacity 0.6s ease;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+        will-change: transform;
     }
     </style>
 </head>

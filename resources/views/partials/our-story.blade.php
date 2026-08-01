@@ -44,18 +44,10 @@
                 </div>
             </div>
 
-            {{-- Back Button --}}
-            <button onclick="goHome()"
-                class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] border border-white/[0.1] text-white/70 text-[11px] font-semibold uppercase tracking-wider hover:bg-white/[0.1] hover:text-white hover:border-white/20 transition-all duration-300 group">
-                <span
-                    class="material-symbols-outlined text-sm group-hover:-translate-x-0.5 transition-transform duration-300">arrow_back</span>
-                <span>Back to Home</span>
-            </button>
-        </div>
 
-        {{-- Decorative bottom --}}
-        <div
-            class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent">
+            {{-- Decorative bottom --}}
+            <div
+                class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent">
+            </div>
         </div>
     </div>
-</div>
