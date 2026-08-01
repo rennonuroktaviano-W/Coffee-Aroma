@@ -58,7 +58,7 @@
 
     <!-- SLIDER CONTAINER -->
     <div id="hero-slider"
-        class="flex w-[200vw] h-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]">
+        class="flex w-[400vw] h-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]">
 
         <!-- Slide 1: Hero 1 (Warm Coffee) -->
         <div class="w-[100vw] h-full flex-shrink-0">
@@ -68,6 +68,16 @@
         <!-- Slide 2: Hero 2 (Matcha Jade Green) -->
         <div class="w-[100vw] h-full flex-shrink-0">
             <x-hero2 />
+        </div>
+
+        <!-- Slide 3: Hero 3 (Tea / Earl Grey) -->
+        <div class="w-[100vw] h-full flex-shrink-0">
+            <x-hero3 />
+        </div>
+
+        <!-- Slide 4: Hero 4 (Chocolate / Mocha) -->
+        <div class="w-[100vw] h-full flex-shrink-0">
+            <x-hero4 />
         </div>
 
     </div>
@@ -99,6 +109,29 @@
                 <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
                 <span
                     class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Matcha</span>
+            </button>
+            <!-- Separator -->
+            <span class="w-[1px] h-3 bg-white/10 rounded-full"></span>
+
+            <!-- Slide 3 Pill -->
+            <button onclick="goToSlide(2)" id="dot-2"
+                class="slide-dot group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-500 cursor-pointer"
+                aria-label="Slide 3">
+                <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
+                <span
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Teh</span>
+            </button>
+
+            <!-- Separator -->
+            <span class="w-[1px] h-3 bg-white/10 rounded-full"></span>
+
+            <!-- Slide 4 Pill -->
+            <button onclick="goToSlide(3)" id="dot-3"
+                class="slide-dot group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-500 cursor-pointer"
+                aria-label="Slide 4">
+                <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
+                <span
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Coklat</span>
             </button>
         </div>
 
@@ -308,7 +341,7 @@
         const dots = document.querySelectorAll('.slide-dot');
         if (index === currentSlide) return;
         currentSlide = index;
-        slider.style.transform = index === 0 ? 'translateX(0%)' : 'translateX(-50%)';
+        slider.style.transform = `translateX(-${index * 25}%)`;
         dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
     }
     document.addEventListener('DOMContentLoaded', () => {
