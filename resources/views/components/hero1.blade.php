@@ -118,16 +118,7 @@
                         </linearGradient>
                     </defs>
 
-                    {{-- Saucer --}}
-                    <ellipse cx="150" cy="155" rx="145" ry="145" fill="#E8E0D8" filter="url(#cupShadow)" />
-                    <ellipse cx="150" cy="155" rx="140" ry="140" fill="#F0EBE5" />
-                    <ellipse cx="150" cy="155" rx="100" ry="100" fill="#E5DDD5" />
-
                     {{-- Cup Handle --}}
-                    <path d="M260,130 C290,130 290,180 260,180" fill="none" stroke="#E8E0D8" stroke-width="14"
-                        stroke-linecap="round" />
-                    <path d="M260,130 C290,130 290,180 260,180" fill="none" stroke="#F5F0EB" stroke-width="8"
-                        stroke-linecap="round" />
 
                     {{-- Cup Body --}}
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="url(#ceramicGrad)" filter="url(#cupShadow)" />
