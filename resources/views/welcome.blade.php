@@ -56,25 +56,59 @@
 
 <body class="bg-[#3e2723] text-white font-body antialiased relative h-screen w-screen overflow-hidden">
 
-    <!-- HERO 1 ONLY -->
-    <div class="h-full w-full">
-        <x-hero1 />
+    <!-- SLIDER CONTAINER -->
+    <div id="hero-slider"
+        class="flex w-[200vw] h-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]">
+
+        <!-- Slide 1: Hero 1 (Warm Coffee) -->
+        <div class="w-[100vw] h-full flex-shrink-0">
+            <x-hero1 />
+        </div>
+
+        <!-- Slide 2: Hero 2 (Matcha Jade Green) -->
+        <div class="w-[100vw] h-full flex-shrink-0">
+            <x-hero2 />
+        </div>
+
     </div>
 
     <!-- ============================================ -->
-    <!-- COMPACT BOTTOM NAVBAR -->
+    <!-- DOTS + NAVBAR (BOTTOM FIXED) -->
     <!-- ============================================ -->
-    <div class="fixed bottom-3 left-1/2 -translate-x-1/2 z-[100] w-[92%] max-w-[720px]">
+    <div
+        class="fixed bottom-4 left-1/2 -translate-x-1/2 z-[100] w-[92%] max-w-[720px] flex flex-col items-center gap-2.5">
+
+        <!-- DOTS INDICATOR (Di Atas Navbar) -->
+        <div class="flex items-center gap-1.5">
+            <!-- Slide 1 Pill -->
+            <button onclick="goToSlide(0)" id="dot-0"
+                class="slide-dot group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-500 cursor-pointer"
+                aria-label="Slide 1">
+                <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
+                <span
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Kopi</span>
+            </button>
+
+            <!-- Separator -->
+            <span class="w-[1px] h-3 bg-white/10 rounded-full"></span>
+
+            <!-- Slide 2 Pill -->
+            <button onclick="goToSlide(1)" id="dot-1"
+                class="slide-dot group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-500 cursor-pointer"
+                aria-label="Slide 2">
+                <span class="dot-circle w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></span>
+                <span
+                    class="dot-label text-[9px] font-semibold text-white/0 uppercase tracking-[0.15em] transition-all duration-500 whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[60px] group-hover:text-white/50">Matcha</span>
+            </button>
+        </div>
 
         <!-- Compact Floating Navbar -->
         <nav id="main-nav" class="w-full">
             <div class="nav-wrapper relative rounded-full overflow-hidden">
-                <!-- Subtle top highlight line (no rotation) -->
                 <div
                     class="nav-highlight absolute top-0 left-[10%] right-[10%] h-[1px] bg-white/20 opacity-0 transition-opacity duration-500">
                 </div>
 
-                <!-- Inner -->
                 <div
                     class="nav-inner relative flex items-center justify-between px-4 py-2 rounded-full bg-white/[0.06] backdrop-blur-2xl border border-white/[0.1] transition-all duration-500">
 
@@ -193,7 +227,36 @@
         user-select: none !important;
     }
 
-    /* ===== NAVBAR SUBTLE GLOW (NO ROTATION) ===== */
+    /* ===== SLIDE DOTS ===== */
+    .slide-dot {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+    }
+
+    .slide-dot:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .slide-dot.active {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+    }
+
+    .slide-dot.active .dot-circle {
+        background: white;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+        transform: scale(1.2);
+    }
+
+    .slide-dot.active .dot-label {
+        max-width: 60px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===== NAVBAR ===== */
     .nav-wrapper:hover .nav-inner,
     .nav-wrapper.scrolled .nav-inner {
         background: rgba(255, 255, 255, 0.08);
@@ -206,7 +269,6 @@
         opacity: 1;
     }
 
-    /* Active link */
     .nav-link.active {
         background: rgba(255, 255, 255, 0.1);
         color: white;
@@ -232,12 +294,27 @@
         }
     }
 
-    .fixed.bottom-3 {
+    .fixed.bottom-4 {
         animation: nav-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     </style>
 
     <script>
+    // ========== SLIDER ==========
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+        const slider = document.getElementById('hero-slider');
+        const dots = document.querySelectorAll('.slide-dot');
+        if (index === currentSlide) return;
+        currentSlide = index;
+        slider.style.transform = index === 0 ? 'translateX(0%)' : 'translateX(-50%)';
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('dot-0')?.classList.add('active');
+    });
+
     // ========== SCROLL EFFECT ==========
     const navWrapper = document.querySelector('.nav-wrapper');
     window.addEventListener('scroll', () => {
