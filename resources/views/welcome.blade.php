@@ -239,7 +239,6 @@
                     screen.style.pointerEvents = 'none';
                     setTimeout(() => {
                         screen.style.display = 'none';
-                        // Reveal hero slider
                         if (hero) {
                             hero.style.opacity = '1';
                             hero.style.transform = 'perspective(1200px) rotateY(0deg) scale(1)';
@@ -249,7 +248,6 @@
             }
         }
 
-        // Natural loading
         const interval = setInterval(() => {
             if (isComplete) {
                 clearInterval(interval);
@@ -313,6 +311,9 @@
     {{-- MENU PAGE --}}
     @include('partials.menu')
 
+    {{-- LOCATION PAGE --}}
+    @include('partials.location')
+
     {{-- 3D RUBIK PAGE TRANSITION SYSTEM --}}
     <script>
     let currentView = 'home';
@@ -326,7 +327,8 @@
             'home': document.getElementById('hero-slider'),
             'our-story': document.getElementById('our-story-page'),
             'experience': document.getElementById('experience-page'),
-            'menu': document.getElementById('menu-page')
+            'menu': document.getElementById('menu-page'),
+            'location': document.getElementById('location-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -393,7 +395,8 @@
             'home': document.getElementById('hero-slider'),
             'our-story': document.getElementById('our-story-page'),
             'experience': document.getElementById('experience-page'),
-            'menu': document.getElementById('menu-page')
+            'menu': document.getElementById('menu-page'),
+            'location': document.getElementById('location-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -457,6 +460,10 @@
 
     function openMenu() {
         transitionTo('menu');
+    }
+
+    function openLocation() {
+        transitionTo('location');
     }
     </script>
 

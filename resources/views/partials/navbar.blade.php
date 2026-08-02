@@ -9,7 +9,7 @@
             class="nav-inner relative flex items-center justify-between px-4 py-2 rounded-full bg-white/[0.06] backdrop-blur-2xl border border-white/[0.1] transition-all duration-500">
 
             <!-- LEFT: Logo -->
-            <a href="#" class="flex items-center gap-2.5 group shrink-0">
+            <a href="#" onclick="goHome(); return false;" class="flex items-center gap-2.5 group shrink-0">
                 <div
                     class="w-7 h-7 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/20 group-hover:scale-105">
                     <span class="material-symbols-outlined text-base text-white/90">local_cafe</span>
@@ -44,7 +44,8 @@
 
             <!-- RIGHT: Actions -->
             <div class="flex items-center gap-1.5 shrink-0">
-                <button
+                <!-- Location GPS Icon Trigger -->
+                <button onclick="openLocation(); return false;" title="Locations"
                     class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/12 hover:border-white/20 hover:scale-110 transition-all duration-300">
                     <span class="material-symbols-outlined text-[15px]">location_on</span>
                 </button>
@@ -66,10 +67,10 @@
     <div id="mobile-menu"
         class="md:hidden mt-2 rounded-2xl bg-white/[0.05] backdrop-blur-2xl border border-white/[0.08] overflow-hidden opacity-0 translate-y-[-8px] pointer-events-none transition-all duration-300">
         <div class="flex flex-col p-3 gap-0.5">
-            <a href="#"
+            <a href="#" onclick="goHome(); return false;"
                 class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
                 <span class="material-symbols-outlined text-white/40 text-base">coffee</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Pilihan Kopi</span>
+                <span class="font-semibold text-xs uppercase tracking-wider">Home</span>
             </a>
             <a href="#" onclick="openOurStory(); return false;"
                 class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
@@ -86,10 +87,10 @@
                 <span class="material-symbols-outlined text-white/40 text-base">restaurant_menu</span>
                 <span class="font-semibold text-xs uppercase tracking-wider">Menu</span>
             </a>
-            <a href="#"
+            <a href="#" onclick="openLocation(); return false;"
                 class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
                 <span class="material-symbols-outlined text-white/40 text-base">store</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Kunjungi</span>
+                <span class="font-semibold text-xs uppercase tracking-wider">Kunjungi / Lokasi</span>
             </a>
             <div class="border-t border-white/10 my-1"></div>
             <button
