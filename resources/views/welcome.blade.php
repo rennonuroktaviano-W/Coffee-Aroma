@@ -98,6 +98,192 @@
 </head>
 
 <body class="bg-[#3e2723] text-white font-body antialiased relative h-screen w-screen overflow-hidden">
+    {{-- LOADING SCREEN --}}
+    <div id="loading-screen"
+        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center transition-opacity duration-700"
+        style="background: linear-gradient(180deg, #d4b996 0%, #c4a882 100%); font-family: 'Manrope', sans-serif;">
+        <!-- Decorative faint text background -->
+        <div class="absolute inset-0 overflow-hidden opacity-[0.06] pointer-events-none select-none"
+            style="background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, #3e2723 80px, #3e2723 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, #3e2723 80px, #3e2723 81px); background-size: 100% 100%, 100% 100%;">
+        </div>
+        <div class="absolute inset-0 flex flex-wrap content-center justify-center gap-16 opacity-[0.04] pointer-events-none select-none"
+            style="font-family: 'Playfair Display', serif; font-size: 64px; color: #3e2723; transform: rotate(-12deg);">
+            <span>AROMA</span><span>ALCHEMY</span><span>AROMA</span><span>ALCHEMY</span>
+            <span>AROMA</span><span>ALCHEMY</span><span>AROMA</span><span>ALCHEMY</span>
+            <span>AROMA</span><span>ALCHEMY</span><span>AROMA</span><span>ALCHEMY</span>
+        </div>
+
+        <!-- Coffee Cup Character -->
+        <div id="cup-character" class="relative mb-10 cursor-pointer transition-transform duration-200 active:scale-95"
+            onclick="boostLoading()">
+            <!-- Steam / Cloud -->
+            <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-20">
+                <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full drop-shadow-lg">
+                    <ellipse cx="35" cy="55" rx="28" ry="22" fill="#f4c430" />
+                    <ellipse cx="60" cy="45" rx="32" ry="26" fill="#f4c430" />
+                    <ellipse cx="85" cy="55" rx="28" ry="22" fill="#f4c430" />
+                    <ellipse cx="50" cy="35" rx="22" ry="18" fill="#f4c430" />
+                    <ellipse cx="70" cy="35" rx="22" ry="18" fill="#f4c430" />
+                    <ellipse cx="42" cy="52" rx="8" ry="5" fill="#e8913a" opacity="0.6" />
+                    <circle cx="48" cy="48" r="3.5" fill="#3e2723" />
+                    <circle cx="72" cy="48" r="3.5" fill="#3e2723" />
+                    <path d="M52 56 Q60 64 68 56" stroke="#3e2723" stroke-width="2.5" stroke-linecap="round"
+                        fill="none" />
+                </svg>
+            </div>
+            <!-- Cup -->
+            <div class="relative w-24 h-16">
+                <svg viewBox="0 0 96 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full drop-shadow-xl">
+                    <path d="M8 16 C8 52 20 58 48 58 C76 58 88 52 88 16 Z" fill="#2d1b16" />
+                    <path d="M8 16 C8 8 20 4 48 4 C76 4 88 8 88 16 C88 20 76 22 48 22 C20 22 8 20 8 16 Z"
+                        fill="#1a0f0c" />
+                    <ellipse cx="48" cy="16" rx="38" ry="8" fill="#3e2723" />
+                    <path d="M88 24 C100 24 104 32 104 40 C104 48 96 52 88 52" stroke="#2d1b16" stroke-width="5"
+                        stroke-linecap="round" fill="none" />
+                </svg>
+            </div>
+            <div id="boost-particles" class="absolute inset-0 pointer-events-none"></div>
+        </div>
+
+        <!-- Title -->
+        <h1 id="loading-title" class="text-[#2d1b16] text-4xl font-bold tracking-tight mb-3"
+            style="font-family: 'Playfair Display', serif;">Order Ready!</h1>
+
+        <!-- Description -->
+        <p id="loading-desc" class="text-[#5c3d2e] text-sm text-center max-w-xs leading-relaxed mb-10 px-4">
+            Grinding fresh beans and frothing the perfect milk just for you. We're getting things ready for your next
+            favorite cup.
+        </p>
+
+        <!-- Progress Card -->
+        <div class="bg-[#e8d5c0] rounded-2xl px-6 py-4 w-[320px] shadow-lg mb-8">
+            <div class="w-full h-3 bg-[#c4a882] rounded-full overflow-hidden mb-3">
+                <div id="progress-bar" class="h-full bg-[#2d1b16] rounded-full transition-all duration-300 ease-out"
+                    style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span id="progress-label"
+                    class="text-[#5c3d2e] text-[10px] font-bold tracking-widest uppercase">Temperature: Heating
+                    Up</span>
+                <span id="progress-percent" class="text-[#2d1b16] text-xs font-bold">0%</span>
+            </div>
+        </div>
+
+        <!-- Boost Button -->
+        <button id="boost-btn" onclick="boostLoading()"
+            class="bg-[#2d1b16] text-[#ffdad4] px-6 py-3 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:bg-[#3e2723] transition-all duration-200 active:scale-95 cursor-pointer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
+                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2" />
+                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
+                <path
+                    d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+            </svg>
+            Tap the cup for a boost!
+        </button>
+    </div>
+
+    {{-- LOADING SCREEN SCRIPT --}}
+    <script>
+    (function() {
+        let progress = 0;
+        let boostAmount = 0;
+        let isComplete = false;
+        const bar = document.getElementById('progress-bar');
+        const pct = document.getElementById('progress-percent');
+        const label = document.getElementById('progress-label');
+        const title = document.getElementById('loading-title');
+        const desc = document.getElementById('loading-desc');
+        const boostBtn = document.getElementById('boost-btn');
+        const cup = document.getElementById('cup-character');
+        const screen = document.getElementById('loading-screen');
+        const hero = document.getElementById('hero-slider');
+
+        const messages = [
+            'Temperature: Heating Up',
+            'Temperature: Steaming',
+            'Temperature: Almost There',
+            'Temperature: Perfect'
+        ];
+
+        function updateUI() {
+            const total = Math.min(progress + boostAmount, 100);
+            bar.style.width = total + '%';
+            pct.textContent = Math.round(total) + '%';
+
+            const msgIndex = Math.min(Math.floor(total / 26), 3);
+            label.textContent = messages[msgIndex];
+
+            if (total >= 100 && !isComplete) {
+                isComplete = true;
+                label.textContent = 'Temperature: Perfect';
+                title.textContent = 'Enjoy Your Coffee!';
+                desc.textContent = 'Everything is set. Welcome to Aroma & Alchemy.';
+                boostBtn.innerHTML = '<span class="animate-spin inline-block mr-2">☕</span> Entering...';
+                boostBtn.disabled = true;
+
+                setTimeout(() => {
+                    screen.style.opacity = '0';
+                    screen.style.pointerEvents = 'none';
+                    setTimeout(() => {
+                        screen.style.display = 'none';
+                        // Reveal hero slider
+                        if (hero) {
+                            hero.style.opacity = '1';
+                            hero.style.transform = 'perspective(1200px) rotateY(0deg) scale(1)';
+                        }
+                    }, 700);
+                }, 800);
+            }
+        }
+
+        // Natural loading
+        const interval = setInterval(() => {
+            if (isComplete) {
+                clearInterval(interval);
+                return;
+            }
+            progress += Math.random() * 1.5 + 0.3;
+            if (progress > 85) progress = 85;
+            updateUI();
+        }, 80);
+
+        window.boostLoading = function() {
+            if (isComplete) return;
+            boostAmount += 15;
+
+            cup.style.transform = 'scale(1.15) rotate(-5deg)';
+            setTimeout(() => {
+                cup.style.transform = '';
+            }, 200);
+
+            for (let i = 0; i < 6; i++) {
+                const p = document.createElement('div');
+                p.className = 'absolute w-2 h-2 rounded-full';
+                p.style.background = ['#f4c430', '#ffdad4', '#e8913a'][Math.floor(Math.random() * 3)];
+                p.style.left = '50%';
+                p.style.top = '30%';
+                p.style.transition = 'all 0.6s ease-out';
+                document.getElementById('boost-particles').appendChild(p);
+
+                requestAnimationFrame(() => {
+                    const angle = Math.random() * Math.PI * 2;
+                    const dist = 30 + Math.random() * 40;
+                    p.style.transform =
+                        `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist - 20}px) scale(0)`;
+                    p.style.opacity = '0';
+                });
+
+                setTimeout(() => p.remove(), 600);
+            }
+
+            updateUI();
+        };
+    })();
+    </script>
 
     {{-- HERO SLIDER --}}
     @include('partials.hero-slider')
