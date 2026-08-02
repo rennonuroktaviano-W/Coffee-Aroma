@@ -100,8 +100,9 @@
 <body class="bg-[#3e2723] text-white font-body antialiased relative h-screen w-screen overflow-hidden">
     {{-- LOADING SCREEN --}}
     <div id="loading-screen"
-        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center transition-opacity duration-700"
+        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center transition-opacity duration-700 overflow-y-auto"
         style="background: linear-gradient(180deg, #d4b996 0%, #c4a882 100%); font-family: 'Manrope', sans-serif;">
+
         <!-- Decorative faint text background -->
         <div class="absolute inset-0 overflow-hidden opacity-[0.06] pointer-events-none select-none"
             style="background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, #3e2723 80px, #3e2723 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, #3e2723 80px, #3e2723 81px); background-size: 100% 100%, 100% 100%;">
@@ -113,77 +114,85 @@
             <span>AROMA</span><span>ALCHEMY</span><span>AROMA</span><span>ALCHEMY</span>
         </div>
 
-        <!-- Coffee Cup Character -->
-        <div id="cup-character" class="relative mb-10 cursor-pointer transition-transform duration-200 active:scale-95"
-            onclick="boostLoading()">
-            <!-- Steam / Cloud -->
-            <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-20">
-                <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-full h-full drop-shadow-lg">
-                    <ellipse cx="35" cy="55" rx="28" ry="22" fill="#f4c430" />
-                    <ellipse cx="60" cy="45" rx="32" ry="26" fill="#f4c430" />
-                    <ellipse cx="85" cy="55" rx="28" ry="22" fill="#f4c430" />
-                    <ellipse cx="50" cy="35" rx="22" ry="18" fill="#f4c430" />
-                    <ellipse cx="70" cy="35" rx="22" ry="18" fill="#f4c430" />
-                    <ellipse cx="42" cy="52" rx="8" ry="5" fill="#e8913a" opacity="0.6" />
-                    <circle cx="48" cy="48" r="3.5" fill="#3e2723" />
-                    <circle cx="72" cy="48" r="3.5" fill="#3e2723" />
-                    <path d="M52 56 Q60 64 68 56" stroke="#3e2723" stroke-width="2.5" stroke-linecap="round"
-                        fill="none" />
-                </svg>
-            </div>
-            <!-- Cup -->
-            <div class="relative w-24 h-16">
-                <svg viewBox="0 0 96 64" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-full h-full drop-shadow-xl">
-                    <path d="M8 16 C8 52 20 58 48 58 C76 58 88 52 88 16 Z" fill="#2d1b16" />
-                    <path d="M8 16 C8 8 20 4 48 4 C76 4 88 8 88 16 C88 20 76 22 48 22 C20 22 8 20 8 16 Z"
+        <!-- Content Wrapper with safe padding -->
+        <div class="relative z-10 flex flex-col items-center justify-center w-full px-4 py-12 min-h-full">
+
+            <!-- Coffee Cup Character -->
+            <div id="cup-character"
+                class="relative mb-6 cursor-pointer transition-transform duration-200 active:scale-95 select-none"
+                onclick="boostLoading()">
+
+                <!-- Combined Cloud + Cup SVG -->
+                <svg viewBox="0 -30 140 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-36 h-52 drop-shadow-xl" style="overflow: visible;">
+                    <!-- Cloud / Steam -->
+                    <g class="animate-bounce" style="animation-duration: 3s;">
+                        <ellipse cx="45" cy="55" rx="28" ry="22" fill="#f4c430" />
+                        <ellipse cx="70" cy="45" rx="32" ry="26" fill="#f4c430" />
+                        <ellipse cx="95" cy="55" rx="28" ry="22" fill="#f4c430" />
+                        <ellipse cx="60" cy="35" rx="22" ry="18" fill="#f4c430" />
+                        <ellipse cx="80" cy="35" rx="22" ry="18" fill="#f4c430" />
+                        <ellipse cx="52" cy="52" rx="8" ry="5" fill="#e8913a" opacity="0.6" />
+                        <circle cx="58" cy="48" r="3.5" fill="#3e2723" />
+                        <circle cx="82" cy="48" r="3.5" fill="#3e2723" />
+                        <path d="M62 56 Q70 64 78 56" stroke="#3e2723" stroke-width="2.5" stroke-linecap="round"
+                            fill="none" />
+                    </g>
+                    <!-- Cup Body -->
+                    <path d="M22 86 C22 122 34 128 62 128 C90 128 102 122 102 86 Z" fill="#2d1b16" />
+                    <!-- Cup Rim Top -->
+                    <path d="M22 86 C22 78 34 74 62 74 C90 74 102 78 102 86 C102 90 90 92 62 92 C34 92 22 90 22 86 Z"
                         fill="#1a0f0c" />
-                    <ellipse cx="48" cy="16" rx="38" ry="8" fill="#3e2723" />
-                    <path d="M88 24 C100 24 104 32 104 40 C104 48 96 52 88 52" stroke="#2d1b16" stroke-width="5"
+                    <!-- Coffee Surface -->
+                    <ellipse cx="62" cy="86" rx="38" ry="8" fill="#3e2723" />
+                    <!-- Cup Handle -->
+                    <path d="M102 94 C114 94 118 102 118 110 C118 118 110 122 102 122" stroke="#2d1b16" stroke-width="5"
                         stroke-linecap="round" fill="none" />
                 </svg>
+
+                <!-- Boost Particles Container -->
+                <div id="boost-particles" class="absolute inset-0 pointer-events-none"></div>
             </div>
-            <div id="boost-particles" class="absolute inset-0 pointer-events-none"></div>
+
+            <!-- Title -->
+            <h1 id="loading-title" class="text-[#2d1b16] text-4xl font-bold tracking-tight mb-3 text-center"
+                style="font-family: 'Playfair Display', serif;">Order Ready!</h1>
+
+            <!-- Description -->
+            <p id="loading-desc" class="text-[#5c3d2e] text-sm text-center max-w-xs leading-relaxed mb-8 px-4">
+                Grinding fresh beans and frothing the perfect milk just for you. We're getting things ready for your
+                next
+                favorite cup.
+            </p>
+
+            <!-- Progress Card -->
+            <div class="bg-[#e8d5c0] rounded-2xl px-6 py-4 w-full max-w-[320px] shadow-lg mb-6">
+                <div class="w-full h-3 bg-[#c4a882] rounded-full overflow-hidden mb-3">
+                    <div id="progress-bar" class="h-full bg-[#2d1b16] rounded-full transition-all duration-300 ease-out"
+                        style="width: 0%"></div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span id="progress-label"
+                        class="text-[#5c3d2e] text-[10px] font-bold tracking-widest uppercase">Temperature: Heating
+                        Up</span>
+                    <span id="progress-percent" class="text-[#2d1b16] text-xs font-bold">0%</span>
+                </div>
+            </div>
+
+            <!-- Boost Button -->
+            <button id="boost-btn" onclick="boostLoading()"
+                class="bg-[#2d1b16] text-[#ffdad4] px-6 py-3 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:bg-[#3e2723] transition-all duration-200 active:scale-95 cursor-pointer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
+                    <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2" />
+                    <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
+                    <path
+                        d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+                </svg>
+                Tap the cup for a boost!
+            </button>
         </div>
-
-        <!-- Title -->
-        <h1 id="loading-title" class="text-[#2d1b16] text-4xl font-bold tracking-tight mb-3"
-            style="font-family: 'Playfair Display', serif;">Order Ready!</h1>
-
-        <!-- Description -->
-        <p id="loading-desc" class="text-[#5c3d2e] text-sm text-center max-w-xs leading-relaxed mb-10 px-4">
-            Grinding fresh beans and frothing the perfect milk just for you. We're getting things ready for your next
-            favorite cup.
-        </p>
-
-        <!-- Progress Card -->
-        <div class="bg-[#e8d5c0] rounded-2xl px-6 py-4 w-[320px] shadow-lg mb-8">
-            <div class="w-full h-3 bg-[#c4a882] rounded-full overflow-hidden mb-3">
-                <div id="progress-bar" class="h-full bg-[#2d1b16] rounded-full transition-all duration-300 ease-out"
-                    style="width: 0%"></div>
-            </div>
-            <div class="flex justify-between items-center">
-                <span id="progress-label"
-                    class="text-[#5c3d2e] text-[10px] font-bold tracking-widest uppercase">Temperature: Heating
-                    Up</span>
-                <span id="progress-percent" class="text-[#2d1b16] text-xs font-bold">0%</span>
-            </div>
-        </div>
-
-        <!-- Boost Button -->
-        <button id="boost-btn" onclick="boostLoading()"
-            class="bg-[#2d1b16] text-[#ffdad4] px-6 py-3 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:bg-[#3e2723] transition-all duration-200 active:scale-95 cursor-pointer">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
-                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2" />
-                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
-                <path
-                    d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-            </svg>
-            Tap the cup for a boost!
-        </button>
     </div>
 
     {{-- LOADING SCREEN SCRIPT --}}
