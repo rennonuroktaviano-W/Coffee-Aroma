@@ -388,14 +388,64 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="relative h-[600px] w-full rounded-[40px] overflow-hidden group">
+
+                        <!-- QUOTE CARD (Mengganti gambar) -->
+                        <div class="relative h-[600px] w-full rounded-[40px] overflow-hidden group flex items-center justify-center p-10 md:p-14"
+                            style="box-shadow: inset 0 0 0 1px rgba(225,193,159,0.15), 0 30px 60px -20px rgba(0,0,0,0.8);">
+
+                            <!-- Background glow -->
+                            <div class="absolute inset-0 bg-[#2a2a2a]/60 backdrop-blur-2xl"></div>
                             <div
-                                class="absolute inset-0 bg-[#e1c19f]/10 mix-blend-overlay z-10 transition-opacity group-hover:opacity-0">
+                                class="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[#e1c19f]/10 blur-[100px] pointer-events-none">
                             </div>
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgQrIfYlg5NBtOtYnDRrnxsLLlwNLkoRu5K8xVKPCxuqLUoqFybhBIhRvAAGlB0IprB92oL6Cb4M77EeinASVpkEQySjSHRioNrm7c_bS1MffYn_N-z2TjtS_OfgObuBIaE2URHy6MoocEBs-8kS5WEy2cs_PaQp_KKh9lY57lGW2DuvzV7Gk8td0Id8KGZ1inYhmmtjYGgnT2uvHcBiKe7mUqHY9YkagpucFd1YE2ZOJRur1OwAYuAw');">
+                            <div
+                                class="absolute bottom-0 left-0 w-[200px] h-[200px] rounded-full bg-[#d7c3b4]/5 blur-[80px] pointer-events-none">
+                            </div>
+
+                            <!-- Decorative border lines -->
+                            <div
+                                class="absolute top-8 left-8 w-16 h-16 border-t border-l border-[#e1c19f]/20 rounded-tl-2xl">
+                            </div>
+                            <div
+                                class="absolute bottom-8 right-8 w-16 h-16 border-b border-r border-[#e1c19f]/20 rounded-br-2xl">
+                            </div>
+
+                            <!-- Quote Content -->
+                            <div class="relative z-10 flex flex-col items-center text-center gap-8">
+                                <!-- Quote Icon -->
+                                <div
+                                    class="w-16 h-16 rounded-full bg-[#e1c19f]/10 border border-[#e1c19f]/20 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[#e1c19f] text-3xl">format_quote</span>
+                                </div>
+
+                                <!-- Quote Text -->
+                                <blockquote
+                                    class="text-[#e2e2e2] text-2xl md:text-3xl leading-relaxed font-light italic"
+                                    style="font-family: 'Playfair Display', serif;">
+                                    "Coffee is a language in itself. It speaks of the soil it grew in, the hands that
+                                    tended it, and the fire that transformed it."
+                                </blockquote>
+
+                                <!-- Divider -->
+                                <div class="w-12 h-[1px] bg-[#e1c19f]/40"></div>
+
+                                <!-- Attribution -->
+                                <div class="flex flex-col items-center gap-2">
+                                    <span class="text-[#e1c19f] text-sm font-semibold uppercase tracking-[0.2em]">Our
+                                        Philosophy</span>
+                                    <span class="text-[#d1c4b9]/60 text-xs uppercase tracking-widest">Since 2018</span>
+                                </div>
+
+                                <!-- Decorative coffee bean icons -->
+                                <div class="flex items-center gap-3 mt-4 opacity-40">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-[#e1c19f]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#e1c19f]"></div>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-[#e1c19f]"></div>
+                                </div>
                             </div>
                         </div>
+                        <!-- END QUOTE CARD -->
+
                     </div>
                 </div>
             </div>
