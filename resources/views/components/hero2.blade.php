@@ -1,12 +1,12 @@
-{{-- HERO 2: Jade Ritual --}}
+<!-- HERO 2: Jade Ritual -->
 <div class="relative w-full h-full bg-[#0f1f16] overflow-hidden flex items-center justify-center">
 
-    {{-- Ambient Background Glow --}}
+    <!-- Ambient Background Glow -->
     <div class="absolute inset-0 pointer-events-none"
         style="background: radial-gradient(circle at 50% 50%, rgba(107,155,110,0.06) 0%, transparent 60%);">
     </div>
 
-    {{-- Floating Particles (Matcha tone) --}}
+    <!-- Floating Particles (Matcha tone) -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <div
             class="absolute w-1 h-1 rounded-full bg-[rgba(107,155,110,0.3)] top-[18%] left-[12%] animate-[float_6s_ease-in-out_infinite]">
@@ -25,11 +25,11 @@
         </div>
     </div>
 
-    {{-- Main Content Grid --}}
+    <!-- Main Content Grid -->
     <div
         class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
-        {{-- LEFT: Text Content --}}
+        <!-- LEFT: Text Content -->
         <div class="text-left space-y-6">
             <div class="flex items-center gap-3">
                 <span class="w-8 h-[1px] bg-[#7bae7f]"></span>
@@ -57,10 +57,10 @@
             </a>
         </div>
 
-        {{-- CENTER: Matcha with Glowing Orb --}}
+        <!-- CENTER: Matcha with Glowing Orb -->
         <div class="relative flex items-center justify-center py-8">
 
-            {{-- GLOWING ORB (Putih, menyala kedap-kedip) --}}
+            <!-- GLOWING ORB (Putih, menyala kedap-kedip) -->
             <div class="absolute w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,248,240,0.95) 0%, rgba(255,240,230,0.6) 25%, rgba(255,225,210,0.25) 50%, rgba(255,210,190,0.1) 70%, transparent 80%);
                         filter: blur(18px);
                         animation: glowPulse 3s ease-in-out infinite;">
@@ -87,7 +87,7 @@
                     style="animation: steamRise 4s ease-in-out infinite 2.6s;" />
             </svg>
 
-            {{-- SVG VECTOR MATCHA (Top View, Matcha Powder Dots) --}}
+            <!-- SVG VECTOR MATCHA (Top View, Matcha Powder Dots) -->
             <div class="relative z-10 w-[220px] h-[220px] md:w-[260px] md:h-[260px]"
                 style="filter: drop-shadow(0 15px 40px rgba(0,0,0,0.6));">
                 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
@@ -173,7 +173,8 @@
                 </div>
                 <div class="text-[11px] font-semibold text-[#5a7a5c] uppercase tracking-[0.2em] mb-1">Temperature</div>
                 <div class="font-display text-3xl text-[#e8f0e9] font-bold"
-                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">80°C Umami</div>
+                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    80°C Umami</div>
             </div>
             <div class="relative pr-6">
                 <div
@@ -181,7 +182,8 @@
                 </div>
                 <div class="text-[11px] font-semibold text-[#5a7a5c] uppercase tracking-[0.2em] mb-1">Texture</div>
                 <div class="font-display text-3xl text-[#e8f0e9] font-bold"
-                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Whisked Perfection</div>
+                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    Whisked Perfection</div>
             </div>
             <div class="relative pr-6">
                 <div
@@ -189,7 +191,8 @@
                 </div>
                 <div class="text-[11px] font-semibold text-[#5a7a5c] uppercase tracking-[0.2em] mb-1">Origin</div>
                 <div class="font-display text-3xl text-[#e8f0e9] font-bold"
-                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Uji, Japan</div>
+                    style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    Uji, Japan</div>
             </div>
         </div>
 

@@ -49,57 +49,57 @@
                     class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/12 hover:border-white/20 hover:scale-110 transition-all duration-300">
                     <span class="material-symbols-outlined text-[15px]">location_on</span>
                 </button>
-                <button
+
+                <!-- PESAN: Trigger transisi dari welcome -->
+                <a href="#" onclick="openPesanan(); return false;"
                     class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 text-[#3e2723] font-bold text-[10px] uppercase tracking-wider hover:bg-white hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 group ml-1">
                     <span>Pesan</span>
                     <span
                         class="material-symbols-outlined text-[13px] group-hover:translate-x-0.5 transition-transform duration-300">arrow_forward</span>
-                </button>
+                </a>
+
                 <button id="mobile-menu-btn"
                     class="md:hidden w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/12 transition-all duration-300">
                     <span class="material-symbols-outlined text-[15px]" id="menu-icon">menu</span>
                 </button>
             </div>
-        </div>
-    </div>
-
-    {{-- Mobile Menu --}}
-    <div id="mobile-menu"
-        class="md:hidden mt-2 rounded-2xl bg-white/[0.05] backdrop-blur-2xl border border-white/[0.08] overflow-hidden opacity-0 translate-y-[-8px] pointer-events-none transition-all duration-300">
-        <div class="flex flex-col p-3 gap-0.5">
-            <a href="#" onclick="goHome(); return false;"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
-                <span class="material-symbols-outlined text-white/40 text-base">coffee</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Home</span>
-            </a>
-            <a href="#" onclick="openOurStory(); return false;"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
-                <span class="material-symbols-outlined text-white/40 text-base">info</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Our Story</span>
-            </a>
-            <a href="#" onclick="openExperience(); return false;"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
-                <span class="material-symbols-outlined text-white/40 text-base">star</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Experience</span>
-            </a>
-            <a href="#" onclick="openMenu(); return false;"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
-                <span class="material-symbols-outlined text-white/40 text-base">restaurant_menu</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Menu</span>
-            </a>
-            <a href="#" onclick="openLocation(); return false;"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
-                <span class="material-symbols-outlined text-white/40 text-base">store</span>
-                <span class="font-semibold text-xs uppercase tracking-wider">Kunjungi / Lokasi</span>
-            </a>
-            <div class="border-t border-white/10 my-1"></div>
-            <button
-                class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-white/90 text-[#3e2723] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all duration-300">
-                <span class="material-symbols-outlined text-sm">shopping_bag</span>
-                <span>Pesan Sekarang</span>
-            </button>
-        </div>
-    </div>
+            {{-- Mobile Menu --}}
+            <div id="mobile-menu"
+                class="md:hidden mt-2 rounded-2xl bg-white/[0.05] backdrop-blur-2xl border border-white/[0.08] overflow-hidden opacity-0 translate-y-[-8px] pointer-events-none transition-all duration-300">
+                <div class="flex flex-col p-3 gap-0.5">
+                    <a href="#" onclick="goHome(); return false;"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white/40 text-base">coffee</span>
+                        <span class="font-semibold text-xs uppercase tracking-wider">Home</span>
+                    </a>
+                    <a href="#" onclick="openOurStory(); return false;"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white/40 text-base">info</span>
+                        <span class="font-semibold text-xs uppercase tracking-wider">Our Story</span>
+                    </a>
+                    <a href="#" onclick="openExperience(); return false;"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white/40 text-base">star</span>
+                        <span class="font-semibold text-xs uppercase tracking-wider">Experience</span>
+                    </a>
+                    <a href="#" onclick="openMenu(); return false;"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white/40 text-base">restaurant_menu</span>
+                        <span class="font-semibold text-xs uppercase tracking-wider">Menu</span>
+                    </a>
+                    <a href="#" onclick="openLocation(); return false;"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white/40 text-base">store</span>
+                        <span class="font-semibold text-xs uppercase tracking-wider">Kunjungi / Lokasi</span>
+                    </a>
+                    <div class="border-t border-white/10 my-1"></div>
+                    <button
+                        class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-white/90 text-[#3e2723] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all duration-300">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        <span>Pesan Sekarang</span>
+                    </button>
+                </div>
+            </div>
 </nav>
 
 {{-- Navbar Styles --}}

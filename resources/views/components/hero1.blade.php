@@ -1,12 +1,12 @@
-{{-- HERO 1: Aroma & Alchemy --}}
+<!-- HERO 1: Aroma & Alchemy -->
 <div class="relative w-full h-full bg-[#3e2723] overflow-hidden flex items-center justify-center">
 
-    {{-- Ambient Background Glow --}}
+    <!-- Ambient Background Glow -->
     <div class="absolute inset-0 pointer-events-none"
         style="background: radial-gradient(circle at 50% 50%, rgba(255,220,180,0.04) 0%, transparent 60%);">
     </div>
 
-    {{-- Floating Particles --}}
+    <!-- Floating Particles -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <div
             class="absolute w-1 h-1 rounded-full bg-[rgba(255,220,180,0.3)] top-[20%] left-[15%] animate-[float_6s_ease-in-out_infinite]">
@@ -25,24 +25,24 @@
         </div>
     </div>
 
-    {{-- Main Content Grid --}}
+    <!-- Main Content Grid -->
     <div
         class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
-        {{-- LEFT: Text Content --}}
+        <!-- LEFT: Text Content -->
         <div class="text-left space-y-6">
-            {{-- Label --}}
+            <!-- Label -->
             <div class="flex items-center gap-3">
                 <span class="w-8 h-[1px] bg-[#D4A574]"></span>
                 <span class="text-[11px] font-semibold text-[#D4A574] uppercase tracking-[0.3em]">The Ritual</span>
             </div>
 
-            {{-- Title --}}
+            <!-- Title -->
             <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-[#FFF8F0] leading-[1.05] font-bold">
                 Aroma <em class="italic text-[#E8C4A0]">&</em><br>Alchemy
             </h1>
 
-            {{-- Description --}}
+            <!-- Description -->
             <p class="text-[15px] text-white/70 leading-relaxed max-w-sm font-light">
                 Experience the perfect balance of hand-roasted beans and velvety microfoam. A moment of stillness in
                 every sip.
@@ -52,7 +52,7 @@
                 Crafted for those who understand that coffee isn't just a drink, but a dialogue between earth and water.
             </p>
 
-            {{-- CTA Button --}}
+            <!-- CTA Button -->
             <a href="#"
                 class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-[#FFD4C7] to-[#F5C6B8] text-[#2C1810] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm
                       transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(255,180,150,0.4),0_0_40px_rgba(255,200,170,0.15)]">
@@ -60,25 +60,25 @@
             </a>
         </div>
 
-        {{-- CENTER: Coffee with Glowing Orb --}}
+        <!-- CENTER: Coffee with Glowing Orb -->
         <div class="relative flex items-center justify-center py-8">
 
-            {{-- GLOWING ORB (Putih, menyala kedap-kedip) --}}
+            <!-- GLOWING ORB (Putih, menyala kedap-kedip) -->
             <div class="absolute w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,248,240,0.95) 0%, rgba(255,240,230,0.6) 25%, rgba(255,225,210,0.25) 50%, rgba(255,210,190,0.1) 70%, transparent 80%);
                         filter: blur(18px);
                         animation: glowPulse 3s ease-in-out infinite;">
             </div>
-            {{-- Outer glow ring --}}
+            <!-- Outer glow ring -->
             <div class="absolute w-[340px] h-[340px] md:w-[380px] md:h-[380px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,245,235,0.2) 0%, transparent 65%);
                         animation: glowPulse 3s ease-in-out infinite reverse;">
             </div>
-            {{-- Inner bright core --}}
+            <!-- Inner bright core -->
             <div class="absolute w-[180px] h-[180px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,248,240,0.3) 40%, transparent 70%);
                         filter: blur(10px);
                         animation: innerGlow 3s ease-in-out infinite;">
             </div>
 
-            {{-- Steam Animation --}}
+            <!-- Steam Animation -->
             <svg class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-16 pointer-events-none z-20"
                 viewBox="0 0 80 60">
                 <path d="M20,50 Q25,35 20,20" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"
@@ -92,7 +92,7 @@
                     style="animation: steamRise 4s ease-in-out infinite 2.6s;" />
             </svg>
 
-            {{-- SVG VECTOR COFFEE (Top View, No Background) --}}
+            <!-- SVG VECTOR COFFEE (Top View, No Background) -->
             <div class="relative z-10 w-[220px] h-[220px] md:w-[260px] md:h-[260px]"
                 style="filter: drop-shadow(0 15px 40px rgba(0,0,0,0.5));">
                 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
@@ -118,21 +118,21 @@
                         </linearGradient>
                     </defs>
 
-                    {{-- Cup Handle --}}
+                    <!-- Cup Handle -->
 
-                    {{-- Cup Body --}}
+                    <!-- Cup Body -->
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="url(#ceramicGrad)" filter="url(#cupShadow)" />
                     <ellipse cx="150" cy="150" rx="112" ry="112" fill="none" stroke="#FFF" stroke-width="2"
                         opacity="0.6" />
 
-                    {{-- Coffee Liquid --}}
+                    <!-- Coffee Liquid -->
                     <ellipse cx="150" cy="150" rx="105" ry="105" fill="url(#foamGrad)" />
                     <ellipse cx="150" cy="150" rx="100" ry="100" fill="none" stroke="#6B4226" stroke-width="3"
                         opacity="0.4" />
                     <ellipse cx="150" cy="150" rx="95" ry="95" fill="none" stroke="#8B5E3C" stroke-width="2"
                         opacity="0.3" />
 
-                    {{-- Latte Art - Rosetta --}}
+                    <!-- Latte Art - Rosetta -->
                     <g transform="translate(150,150)">
                         <path d="M0,35 Q2,15 0,-5" fill="none" stroke="url(#milkGrad)" stroke-width="5"
                             stroke-linecap="round" opacity="0.95" />
@@ -152,7 +152,7 @@
                         <path d="M20,5 Q15,8 10,5" fill="none" stroke="#FFFDF8" stroke-width="1.5" opacity="0.5" />
                     </g>
 
-                    {{-- Foam Bubbles --}}
+                    <!-- Foam Bubbles -->
                     <circle cx="120" cy="120" r="1.5" fill="#FFF" opacity="0.3" />
                     <circle cx="180" cy="130" r="1" fill="#FFF" opacity="0.25" />
                     <circle cx="140" cy="190" r="1.2" fill="#FFF" opacity="0.2" />
@@ -160,14 +160,14 @@
                     <circle cx="110" cy="160" r="1" fill="#FFF" opacity="0.25" />
                     <circle cx="190" cy="150" r="1.3" fill="#FFF" opacity="0.2" />
 
-                    {{-- Rim Reflection --}}
+                    <!-- Rim Reflection -->
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="none" stroke="#FFF" stroke-width="1"
                         opacity="0.15" />
                 </svg>
             </div>
         </div>
 
-        {{-- RIGHT: Stats --}}
+        <!-- RIGHT: Stats -->
         <div class="flex flex-col gap-8 md:items-end md:text-right">
             <div class="relative pr-6">
                 <div
@@ -200,7 +200,7 @@
 
     </div>
 
-    {{-- Custom Animations (Tambahin ke style global atau tailwind config) --}}
+    <!-- Custom Animations (Tambahin ke style global atau tailwind config) -->
     <style>
     @keyframes glowPulse {
 

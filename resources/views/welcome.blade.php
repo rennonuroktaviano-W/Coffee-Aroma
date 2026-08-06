@@ -98,7 +98,7 @@
 </head>
 
 <body class="bg-[#3e2723] text-white font-body antialiased relative h-screen w-screen overflow-hidden">
-    {{-- LOADING SCREEN --}}
+    <!-- LOADING SCREEN -->
     <div id="loading-screen"
         class="fixed inset-0 z-[9999] flex flex-col items-center justify-center transition-opacity duration-700 overflow-y-auto"
         style="background: linear-gradient(180deg, #d4b996 0%, #c4a882 100%); font-family: 'Manrope', sans-serif;">
@@ -314,6 +314,9 @@
     {{-- LOCATION PAGE --}}
     @include('partials.location')
 
+    {{-- PESANAN PAGE --}}
+    @include('partials.pesanan')
+
     {{-- 3D RUBIK PAGE TRANSITION SYSTEM --}}
     <script>
     let currentView = 'home';
@@ -328,7 +331,8 @@
             'our-story': document.getElementById('our-story-page'),
             'experience': document.getElementById('experience-page'),
             'menu': document.getElementById('menu-page'),
-            'location': document.getElementById('location-page')
+            'location': document.getElementById('location-page'),
+            'pesanan': document.getElementById('pesanan-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -396,7 +400,8 @@
             'our-story': document.getElementById('our-story-page'),
             'experience': document.getElementById('experience-page'),
             'menu': document.getElementById('menu-page'),
-            'location': document.getElementById('location-page')
+            'location': document.getElementById('location-page'),
+            'pesanan': document.getElementById('pesanan-page')
         };
 
         const dotsContainer = document.querySelector('.slide-dots-wrapper');
@@ -464,6 +469,10 @@
 
     function openLocation() {
         transitionTo('location');
+    }
+
+    function openPesanan() {
+        transitionTo('pesanan');
     }
     </script>
 
