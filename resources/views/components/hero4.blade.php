@@ -1,12 +1,14 @@
-{{-- HERO 4: Oreo Obsession --}}
+<!-- =========================================================================
+     HERO 4: OREO OBSESSION
+     ========================================================================= -->
 <div class="relative w-full h-full bg-[#0a0c14] overflow-hidden flex items-center justify-center">
 
-    {{-- Ambient Background Glow (Oreo blue tone) --}}
+    <!-- Ambient Background Glow -->
     <div class="absolute inset-0 pointer-events-none"
         style="background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.04) 0%, transparent 60%);">
     </div>
 
-    {{-- Floating Particles (Oreo blue/white tone) --}}
+    <!-- Floating Particles (Blue/White Tone) -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <div
             class="absolute w-1 h-1 rounded-full bg-[rgba(200,210,230,0.25)] top-[18%] left-[12%] animate-[float_6s_ease-in-out_infinite]">
@@ -25,11 +27,10 @@
         </div>
     </div>
 
-    {{-- Floating Oreo Cookies Background --}}
+    <!-- Floating Oreo Cookies Pattern -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
-        {{-- Oreo Cookie 1 --}}
-        <div class="absolute top-[8%] left-[5%] w-14 h-14 opacity-[0.08] animate-[float_10s_ease-in-out_infinite]"
-            style="animation-delay: 0s;">
+        <!-- Cookie 1 -->
+        <div class="absolute top-[8%] left-[5%] w-14 h-14 opacity-[0.08] animate-[float_10s_ease-in-out_infinite]">
             <svg viewBox="0 0 100 100" class="w-full h-full">
                 <circle cx="50" cy="50" r="48" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1" />
                 <circle cx="50" cy="50" r="38" fill="#0f0f1a" />
@@ -38,7 +39,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 2 --}}
+        <!-- Cookie 2 -->
         <div class="absolute top-[15%] right-[8%] w-10 h-10 opacity-[0.06] animate-[float_12s_ease-in-out_infinite]"
             style="animation-delay: 2s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -49,7 +50,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 3 --}}
+        <!-- Cookie 3 -->
         <div class="absolute top-[65%] left-[3%] w-16 h-16 opacity-[0.07] animate-[float_14s_ease-in-out_infinite]"
             style="animation-delay: 4s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -60,7 +61,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 4 --}}
+        <!-- Cookie 4 -->
         <div class="absolute top-[75%] right-[5%] w-12 h-12 opacity-[0.09] animate-[float_11s_ease-in-out_infinite]"
             style="animation-delay: 1s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -71,7 +72,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 5 --}}
+        <!-- Cookie 5 -->
         <div class="absolute top-[40%] left-[8%] w-8 h-8 opacity-[0.05] animate-[float_9s_ease-in-out_infinite]"
             style="animation-delay: 3s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -82,7 +83,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 6 --}}
+        <!-- Cookie 6 -->
         <div class="absolute top-[30%] right-[3%] w-14 h-14 opacity-[0.06] animate-[float_13s_ease-in-out_infinite]"
             style="animation-delay: 5s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -93,7 +94,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 7 --}}
+        <!-- Cookie 7 -->
         <div class="absolute top-[85%] left-[15%] w-10 h-10 opacity-[0.07] animate-[float_10s_ease-in-out_infinite]"
             style="animation-delay: 1.5s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -104,7 +105,7 @@
                 <circle cx="50" cy="50" r="8" fill="#1a1a2e" />
             </svg>
         </div>
-        {{-- Oreo Cookie 8 --}}
+        <!-- Cookie 8 -->
         <div class="absolute top-[50%] right-[12%] w-11 h-11 opacity-[0.08] animate-[float_11s_ease-in-out_infinite]"
             style="animation-delay: 2.5s;">
             <svg viewBox="0 0 100 100" class="w-full h-full">
@@ -117,30 +118,33 @@
         </div>
     </div>
 
-    {{-- Main Content Grid --}}
+    <!-- Main Content Grid Container -->
     <div
         class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
-        {{-- LEFT: Text Content --}}
+        <!-- Column 1: Left Text Content -->
         <div class="text-left space-y-6">
+            <!-- Sub-header Badge -->
             <div class="flex items-center gap-3">
                 <span class="w-8 h-[1px] bg-[#3b82f6]"></span>
                 <span class="text-[11px] font-semibold text-[#3b82f6] uppercase tracking-[0.3em]">The Indulgence</span>
             </div>
 
+            <!-- Title -->
             <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-[#f0f2f8] leading-[1.05] font-bold">
                 Oreo <em class="italic text-[#93bbfc]">Obsession</em>
             </h1>
 
+            <!-- Description & Tagline -->
             <p class="text-[15px] text-[#a8b0c8] leading-relaxed max-w-sm font-light">
                 Creamy, crunchy, and utterly addictive. Rich chocolate espresso swirled with Oreo cream foam and cookie
                 crumble.
             </p>
-
             <p class="text-[13px] text-[#6b7290] italic leading-relaxed max-w-sm">
                 For the sweet tooth who believes dessert belongs in every cup — twist, lick, sip.
             </p>
 
+            <!-- Call To Action Button -->
             <a href="#"
                 class="inline-block mt-4 px-8 py-4 bg-[#3b82f6] text-[#0a0c14] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm
                       transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(59,130,246,0.3),0_0_40px_rgba(59,130,246,0.1)] hover:bg-[#60a5fa]">
@@ -148,23 +152,21 @@
             </a>
         </div>
 
-        {{-- CENTER: Oreo with Glowing Orb --}}
+        <!-- Column 2: Center Graphic (Glowing Orb + Oreo Drink SVG) -->
         <div class="relative flex items-center justify-center py-8">
 
-            {{-- GLOWING ORB (Cool white/blue, menyala) --}}
-            <div class="absolute w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(240,245,255,0.95) 0%, rgba(220,230,255,0.6) 25%, rgba(180,200,255,0.25) 50%, rgba(150,180,255,0.1) 70%, transparent 80%);
-                        filter: blur(18px);
-                        animation: glowPulse 3s ease-in-out infinite;">
+            <!-- Glowing Orb Effects -->
+            <div class="absolute w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full pointer-events-none"
+                style="background: radial-gradient(circle, rgba(240,245,255,0.95) 0%, rgba(220,230,255,0.6) 25%, rgba(180,200,255,0.25) 50%, rgba(150,180,255,0.1) 70%, transparent 80%); filter: blur(18px); animation: glowPulse 3s ease-in-out infinite;">
             </div>
-            <div class="absolute w-[340px] h-[340px] md:w-[380px] md:h-[380px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(200,220,255,0.2) 0%, transparent 65%);
-                        animation: glowPulse 3s ease-in-out infinite reverse;">
+            <div class="absolute w-[340px] h-[340px] md:w-[380px] md:h-[380px] rounded-full pointer-events-none"
+                style="background: radial-gradient(circle, rgba(200,220,255,0.2) 0%, transparent 65%); animation: glowPulse 3s ease-in-out infinite reverse;">
             </div>
-            <div class="absolute w-[180px] h-[180px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(240,245,255,0.3) 40%, transparent 70%);
-                        filter: blur(10px);
-                        animation: innerGlow 3s ease-in-out infinite;">
+            <div class="absolute w-[180px] h-[180px] rounded-full pointer-events-none"
+                style="background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(240,245,255,0.3) 40%, transparent 70%); filter: blur(10px); animation: innerGlow 3s ease-in-out infinite;">
             </div>
 
-            {{-- Steam --}}
+            <!-- Steam Effect Overlay -->
             <svg class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-16 pointer-events-none z-20"
                 viewBox="0 0 80 60">
                 <path d="M20,50 Q25,35 20,20" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"
@@ -178,7 +180,7 @@
                     style="animation: steamRise 4s ease-in-out infinite 2.6s;" />
             </svg>
 
-            {{-- SVG VECTOR OREO (Top View, Cream Swirl + Cookie Crumbs) --}}
+            <!-- Vector Illustration: Oreo Drink Top View -->
             <div class="relative z-10 w-[220px] h-[220px] md:w-[260px] md:h-[260px]"
                 style="filter: drop-shadow(0 15px 40px rgba(0,0,0,0.7));">
                 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
@@ -205,21 +207,19 @@
                         </linearGradient>
                     </defs>
 
-                    {{-- Cup Body --}}
+                    <!-- Ceramic Cup Body -->
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="url(#oreoCeramic)" filter="url(#oreoShadow)" />
                     <ellipse cx="150" cy="150" rx="112" ry="112" fill="none" stroke="#FFF" stroke-width="2"
                         opacity="0.6" />
 
-                    {{-- Oreo Liquid (Dark Chocolate) --}}
+                    <!-- Liquid Layer -->
                     <ellipse cx="150" cy="150" rx="105" ry="105" fill="url(#oreoLiquid)" />
                     <ellipse cx="150" cy="150" rx="100" ry="100" fill="none" stroke="#0F0905" stroke-width="3"
                         opacity="0.6" />
                     <ellipse cx="150" cy="150" rx="95" ry="95" fill="none" stroke="#2A1B15" stroke-width="2"
                         opacity="0.4" />
 
-
-
-                    {{-- Cookie Crumbs (Oreo biscuit pieces) --}}
+                    <!-- Cookie Crumbs (Biscuit Pieces) -->
                     <rect x="125" y="120" width="4" height="3" fill="#1a0f08" opacity="0.9"
                         transform="rotate(15 125 120)" />
                     <rect x="170" y="130" width="3" height="4" fill="#1a0f08" opacity="0.85"
@@ -277,7 +277,7 @@
                     <rect x="140" y="115" width="3" height="4" fill="#1a0f08" opacity="0.9"
                         transform="rotate(55 140 115)" />
 
-                    {{-- White cream specks --}}
+                    <!-- Cream Specks -->
                     <circle cx="132" cy="138" r="1.2" fill="#FFF" opacity="0.6" />
                     <circle cx="168" cy="152" r="1" fill="#FFF" opacity="0.5" />
                     <circle cx="148" cy="168" r="1.3" fill="#FFF" opacity="0.7" />
@@ -292,15 +292,16 @@
                     <circle cx="118" cy="142" r="1" fill="#FFF" opacity="0.55" />
                     <circle cx="180" cy="165" r="1.3" fill="#FFF" opacity="0.6" />
 
-                    {{-- Rim Reflection --}}
+                    <!-- Rim Highlight -->
                     <ellipse cx="150" cy="150" rx="115" ry="115" fill="none" stroke="#FFF" stroke-width="1"
                         opacity="0.15" />
                 </svg>
             </div>
         </div>
 
-        {{-- RIGHT: Stats --}}
+        <!-- Column 3: Right Metrics & Specifications -->
         <div class="flex flex-col gap-8 md:items-end md:text-right">
+            <!-- Metric 1 -->
             <div class="relative pr-6">
                 <div
                     class="absolute right-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[rgba(59,130,246,0.5)] to-transparent">
@@ -309,6 +310,8 @@
                 <div class="font-display text-3xl text-[#f0f2f8] font-bold"
                     style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">65°C Creamy</div>
             </div>
+
+            <!-- Metric 2 -->
             <div class="relative pr-6">
                 <div
                     class="absolute right-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[rgba(59,130,246,0.5)] to-transparent">
@@ -317,6 +320,8 @@
                 <div class="font-display text-3xl text-[#f0f2f8] font-bold"
                     style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Cookie Crunch</div>
             </div>
+
+            <!-- Metric 3 -->
             <div class="relative pr-6">
                 <div
                     class="absolute right-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[rgba(59,130,246,0.5)] to-transparent">
@@ -329,6 +334,7 @@
 
     </div>
 
+    <!-- Scoped Custom CSS Animations -->
     <style>
     @keyframes glowPulse {
 

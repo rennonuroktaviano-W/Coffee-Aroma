@@ -1,22 +1,19 @@
-{{-- ========================================== --}}
-{{-- MENU PAGE                                  --}}
-{{-- Experimental series — documented flavor    --}}
-{{-- ========================================== --}}
+<!-- MENU -->
 
 <div id="menu-page" class="absolute inset-0 z-30 opacity-0 pointer-events-none"
     style="transform: perspective(1200px) rotateY(90deg) scale(0.92); transform-origin: center left; backface-visibility: hidden;">
 
-    {{-- Background matching hero1 style --}}
+    <!-- Background matching hero1 style -->
     <div class="absolute inset-0 bg-[#3e2723] overflow-hidden">
-        {{-- Ambient radial glow --}}
+        <!-- Ambient radial glow -->
         <div class="absolute inset-0 pointer-events-none"
             style="background: radial-gradient(circle at 50% 50%, rgba(255,220,180,0.04) 0%, transparent 60%);">
         </div>
-        {{-- Top ambient glow --}}
+        <!-- Top ambient glow -->
         <div
             class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#C89B6D]/[0.04] rounded-full blur-[120px] pointer-events-none">
         </div>
-        {{-- Bottom ambient glow --}}
+        {{-- Bottom ambient glow -- 
         <div
             class="absolute -bottom-32 right-1/4 w-[500px] h-[400px] bg-[#C89B6D]/[0.03] rounded-full blur-[100px] pointer-events-none">
         </div>

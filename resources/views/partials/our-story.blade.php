@@ -134,7 +134,7 @@
                     {{-- Card 1: Premium Beans --}}
                     <div
                         class="feature-card group relative p-8 md:p-10 rounded-2xl bg-white/[0.025] border border-white/[0.06] backdrop-blur-2xl transition-all duration-500 hover:bg-white/[0.05] hover:border-[#C89B6D]/15 hover:-translate-y-1.5 hover:shadow-[0_8px_40px_-12px_rgba(200,155,109,0.15)]">
-                        {{-- Hover glow --}}
+                        <!-- Hover glow -->
                         <div
                             class="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#C89B6D]/[0.07] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                         </div>
@@ -270,9 +270,6 @@
         }
         </style>
 
-        {{-- ========================================== --}}
-        {{-- JAVASCRIPT: SCROLL REVEAL & COUNTERS       --}}
-        {{-- ========================================== --}}
         <script>
         (function() {
             const page = document.getElementById('our-story-page');

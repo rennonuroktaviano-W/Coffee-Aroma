@@ -1,4 +1,4 @@
-{{-- LOCATION / SANCTUARIES PAGE --}}
+<!-- LOCATION -->
 <div id="location-page"
     class="fixed inset-0 w-full h-full bg-[#412D15] text-[#e2e2e2] opacity-0 pointer-events-none z-10 overflow-y-auto transition-all duration-700 ease-out"
     style="transform: perspective(1200px) rotateY(90deg) scale(0.92); transform-origin: center center; will-change: transform, opacity;">

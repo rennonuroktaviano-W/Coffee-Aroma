@@ -1,12 +1,9 @@
-{{-- ========================================== --}}
-{{-- EXPERIENCE PAGE                            --}}
-{{-- Immersive journey through our world        --}}
-{{-- ========================================== --}}
+<!--PAGES EXPERIENCE-->
 
 <div id="experience-page" class="absolute inset-0 z-30 opacity-0 pointer-events-none"
     style="transform: perspective(1200px) rotateY(90deg) scale(0.92); transform-origin: center left; backface-visibility: hidden;">
 
-    {{-- Dark chocolate background with ambient glow --}}
+    <!-- Dark chocolate background with ambient glow -->
     <div class="absolute inset-0 bg-[#1F150C] overflow-hidden">
         <div
             class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#C89B6D]/[0.04] rounded-full blur-[120px] pointer-events-none">
@@ -19,12 +16,9 @@
         </div>
     </div>
 
-    {{-- Scrollable Content Container --}}
+    <!-- Scrollable Content Container -->
     <div id="experience-scroll" class="relative w-full h-full overflow-y-auto overflow-x-hidden">
-
-        {{-- Decorative top line --}}
         <div class="sticky top-0 z-20 h-[1px] bg-gradient-to-r from-transparent via-[#C89B6D]/25 to-transparent"></div>
-
         {{-- Main Content --}}
         <div class="min-h-full flex flex-col items-center justify-center px-6 md:px-12 py-24 md:py-32">
             <div class="max-w-5xl mx-auto">
@@ -58,7 +52,6 @@
                     </div>
                 </div>
 
-                {{-- ATMOSPHERE SECTION --}}
                 <div class="reveal-item grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-32 md:mb-40">
                     <div class="order-2 md:order-1">
                         <span
@@ -98,7 +91,7 @@
                     </div>
                 </div>
 
-                {{-- SIGNATURE MOMENTS --}}
+                <!-- SIGNATURE MOMENTS -->
                 <div class="mb-32 md:mb-40">
                     <div class="text-center mb-16">
                         <span
@@ -192,7 +185,7 @@
                     </div>
                 </div>
 
-                {{-- TESTIMONIALS --}}
+                <!-- TESTIMONIALS -->
                 <div class="mb-32 md:mb-40">
                     <div class="text-center mb-16">
                         <span
@@ -242,7 +235,7 @@
                     </div>
                 </div>
 
-                {{-- VISIT CTA --}}
+
                 <div
                     class="reveal-item text-center relative py-20 md:py-28 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.06] overflow-hidden">
                     <div
@@ -285,7 +278,10 @@
             </div>
         </div>
 
-        {{-- STYLES --}}
+
+
+
+        <!-- STYLES -->
         <style>
         .reveal-item {
             opacity: 0;
@@ -320,7 +316,10 @@
         }
         </style>
 
-        {{-- SCRIPTS --}}
+
+
+
+        <!-- SCRIPTS -->
         <script>
         (function() {
             const page = document.getElementById('experience-page');

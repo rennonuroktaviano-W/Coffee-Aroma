@@ -1,4 +1,4 @@
-{{-- SLIDER CONTAINER --}}
+<!-- SLIDER CONTAINER -->
 <div id="hero-slider" class="flex w-[400vw] h-full transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]">
 
     <!-- Slide 1: Hero 1 (Warm Coffee) -->
@@ -23,7 +23,9 @@
 
 </div>
 
-{{-- Slider Logic --}}
+
+
+<!-- Slider Logic -->
 <script>
 // ========== SLIDER ==========
 let currentSlide = 0;
